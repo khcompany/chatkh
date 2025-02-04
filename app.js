@@ -6,7 +6,21 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
 
-const flowremoto = addKeyword(['7']).addAnswer(
+
+// Inicio  opciones primer menu 
+const flowmarcas = addKeyword(['1']) 
+.addAnswer(
+    [
+        'A continuacion selecione el numero de la marca que quieres consultar',
+        '👉 *1-* Apple ',
+            
+    ],
+    null,
+    null,
+    [flowApple]
+)
+
+const flowremoto = addKeyword(['2']).addAnswer(
     [
         '⚡️Hey que más ps, para que empecemos con el servicio remoto descarga el siguiente programa ⚡️',
         '\n ✅ https://www.ultraviewer.net/en/download.html' ])
@@ -15,24 +29,56 @@ const flowremoto = addKeyword(['7']).addAnswer(
 const flowasesor = addKeyword(['3']).addAnswer(['📄 Nuestros asesores te responderan de 9:00 AM a 7:00 PM. ',
    ' \n Por favor escribe tu consulta'])
 
-   
 
-
-
-
-
-   const flowdirecc = addKeyword(['4']).addAnswer(
+const flowdirecc = addKeyword(['4']).addAnswer(
     [
         '⚡️Hey que más ps, Nos encontraras en el *Centro Comercial Verecruz* en el Local *109* Burbuja *5* de 9:00 AM a 7:00 PM. De Lunes A Sabado⚡️',
         '\n ✅ https://maps.app.goo.gl/zTEMxnzoijsFid879' ])
-
-
-        const flowhora = addKeyword(['5']).addAnswer(
+        
+ 
+const flowhora = addKeyword(['5']).addAnswer(
             [
                 '⚡️Hey que más ps, Nuestro Horario de Atención es de 9:00 AM a 7:00 PM. De Lunes A Sabado⚡️',
-                '\n ✅ Te Esperamos Pronto ⚡️' ])
-        
-    
+                '\n ✅ Te Esperamos Pronto ⚡️' ])        
+
+
+const flowclases = addKeyword(['6']).addAnswer(
+            [
+                '⚡️La mejor forma de predecir el futuro es crearlo ⚡️',
+      '\n ⚡️Capacítate como técnico en software de dispositivos móviles ⚡️',
+     
+                '\n ✅ https://team-khcompany.com/#pricing' ])        
+
+
+const flowcuenta = addKeyword(['7']).addAnswer(['👉 #42049019682 ahorros bancolombia ',
+                    '👉 #3012815011 nequi ',
+                    
+                    '👍 Favor mandar comprobante ',
+                    
+                    '⚡ Gracias por confiar en KHCOMPANY',
+                    '\n🙃 Escribe *Inicio* para volver ',
+                        ])
+// fin opciones primer menu 
+
+
+
+// Inicio  opciones menu apple 
+const flowApple = addKeyword(['1']).addAnswer(
+    [
+        'A continuacion selecione el numero del servicio que quieres consultar',
+        '👉 *1-* Bypass del 6 al X ',
+        '👉 *2-* Bypass del Xs al 15 ',
+        '👉 *3-* Icloud Raiz ',
+        '👉 *4-* Bandas',
+        '👉 *5-* Bloqueo Por no Registro ',
+        '👉 *6-* Turbo sim',   
+        '👉 *7*- Otro Daño ',         
+    ],
+    null,
+    null,
+    [flowBypass6ax, flowIcloudraiz, flowbandas, flownoregistroip, flowturbo, flowotroda, flowBypassxsa16]
+)
+
 
 const flowBypass6ax = addKeyword(['1']).addAnswer(
     [ 'Nota importante 🤖 estos precios son solo para los iPhone que ',
@@ -49,7 +95,6 @@ const flowBypass6ax = addKeyword(['1']).addAnswer(
 'iPhone 8 Plus $80',
 'iPhone X $80', 
 '\n🙃 Escribe *Inicio* para volver al Menu'])
-
 
 const flowBypassxsa16 = addKeyword(['2']).addAnswer([' ⚠️⚠️*EN EL MOMENTO ESTA CAIDO EL SERVICIO DE BYPASS PERO ESTOS SON LOS PRECIOS QUE HABIAN DISPONIBLES*⚠️⚠️',
     ' Precios Bypass Iphone IOS 17 ',
@@ -77,7 +122,6 @@ const flowBypassxsa16 = addKeyword(['2']).addAnswer([' ⚠️⚠️*EN EL MOMENT
  'IPHONE 14 PRO MAX ⚡️ $880.000 ',
  '\n🙃 Escribe *Inicio* para volver al Menu'])
 
-
  const flowIcloudraiz = addKeyword(['3']).addAnswer(['⚡️Precios iCloud de raíz ⚡️',
     '*LEA MUY BIEN LA INFORMACIÓN HAY DOS METODOS*',
     ' lista actualizada.',
@@ -96,115 +140,70 @@ const flowBypassxsa16 = addKeyword(['2']).addAnswer([' ⚠️⚠️*EN EL MOMENT
    '  y se demora de 1 a 7 días y en caso de ser exitoso tiene 24 h para pagar el restante. Leer muy bien ', 
 '\n🙃 Escribe *Inicio* para volver al Menu'])
 
-
 const flowbandas = addKeyword(['4']).addAnswer(['⚡️*INFORMACION DE BANDAS DE IPHONE*⚡️ ',
 
-'\n para poder darle una respuesta mas rápida a su duda por favor denos la siguiente información',
-
-'1- modelo del dispositivo ',
-'2- operador exacto ',
-'3- pais de donde viene ',
-
-'\n en caso tal de no saberse el operador de origen cuesta 10 mil solo el averiguar el operador para poderles brindar el precio exacto de las bandas ',
-
-'\n nota: en caso de las bandas ser muy caras hay otra opción que es por turbo sim hay dos precios ',
-
-'\n 1- la barata que vale 100 - no se configura automático y cada que se valla la señal tienen que configurarla manual ',
-'2- la cara que vale 130 - se programa automáticamente cada que se va la señal y se programa sola cuando el iphone se actualiza de versión automático ',
-'\n🙃 Escribe *Inicio* para volver al Menu'])
-
-const flownoregistroip = addKeyword(['5']).addAnswer([' ⚡️*INFORMACION DE DESBLOQUEO POR NO REGISTRO*⚡️ ',
-    '\n *TIGO* $60 DE 1 A 7 DIAS O $95 DE 1 HORA A 24 HORAS ',
-    ' *CLARO* $55 DE 1 A 7 DIAS O $85 DE 1 HORA A 24 HORAS',
-    ' *MOVISTAR* $50 DE 1 A 7 DIAS O $80 DE 1 HORA A 24 HORAS',
-    ' *MOVIL EXITO, WOM, ETB, PILLO PHONE* $55 DE 1 A 7 DIAS O $90 DE 1 HORA A 24 HORAS',
-    '\n🙃 Escribe *Inicio* para volver al Menu'])
-
-const flowturbo = addKeyword(['6']).addAnswer(['⚡️*INFORMACION DE TURBO SIM DE IPHONE*⚡️ ',
+    '\n para poder darle una respuesta mas rápida a su duda por favor denos la siguiente información',
+    
+    '1- modelo del dispositivo ',
+    '2- operador exacto ',
+    '3- pais de donde viene ',
+    
+    '\n en caso tal de no saberse el operador de origen cuesta 10 mil solo el averiguar el operador para poderles brindar el precio exacto de las bandas ',
+    
+    '\n nota: en caso de las bandas ser muy caras hay otra opción que es por turbo sim hay dos precios ',
     
     '\n 1- la barata que vale 100 - no se configura automático y cada que se valla la señal tienen que configurarla manual ',
     '2- la cara que vale 130 - se programa automáticamente cada que se va la señal y se programa sola cuando el iphone se actualiza de versión automático ',
     '\n🙃 Escribe *Inicio* para volver al Menu'])
+    
+    const flownoregistroip = addKeyword(['5']).addAnswer([' ⚡️*INFORMACION DE DESBLOQUEO POR NO REGISTRO*⚡️ ',
+        '\n *TIGO* $60 DE 1 A 7 DIAS O $95 DE 1 HORA A 24 HORAS ',
+        ' *CLARO* $55 DE 1 A 7 DIAS O $85 DE 1 HORA A 24 HORAS',
+        ' *MOVISTAR* $50 DE 1 A 7 DIAS O $80 DE 1 HORA A 24 HORAS',
+        ' *MOVIL EXITO, WOM, ETB, PILLO PHONE* $55 DE 1 A 7 DIAS O $90 DE 1 HORA A 24 HORAS',
+        '\n🙃 Escribe *Inicio* para volver al Menu'])
+    
+    const flowturbo = addKeyword(['6']).addAnswer(['⚡️*INFORMACION DE TURBO SIM DE IPHONE*⚡️ ',
+        
+        '\n 1- la barata que vale 100 - no se configura automático y cada que se valla la señal tienen que configurarla manual ',
+        '2- la cara que vale 130 - se programa automáticamente cada que se va la señal y se programa sola cuando el iphone se actualiza de versión automático ',
+        '\n🙃 Escribe *Inicio* para volver al Menu'])
+    
+    
+    const flowotroda = addKeyword(['7']).addAnswer(['Describenos a detalle el daño a consultar'])
+    
+// fin  opciones menu apple
 
-
-const flowotroda = addKeyword(['7']).addAnswer(['Describenos a detalle el daño a consultar'])
-
-
-
-
-
-
-
-
-const flowcuenta = addKeyword(['6']).addAnswer(['👉 #42049019682 ahorros bancolombia ',
-'👉 #3012815011 nequi ',
-
-'👍 Favor mandar comprobante ',
-
-'⚡ Gracias por confiar en KHCOMPANY',
-'\n🙃 Escribe *Inicio* para volver ',
-    ])
-
-
-
-
-
-const flowApple = addKeyword(['1']).addAnswer(
-    [
-        'A continuacion selecione el numero del servicio que quieres consultar',
-        '👉 *1-* Bypass del 6 al X ',
-        '👉 *2-* Bypass del Xs al 15 ',
-        '👉 *3-* Icloud Raiz ',
-        '👉 *4-* Bandas',
-        '👉 *5-* Bloqueo Por no Registro ',
-        '👉 *6-* Turbo sim',   
-        '👉 *7*- Otro Daño ',         
-    ],
-    null,
-    null,
-    [flowBypass6ax, flowIcloudraiz, flowbandas, flownoregistroip, flowturbo, flowotroda, flowBypassxsa16]
-)
+      
+        
+    
 
 
 
-const flowmarcas = addKeyword(['1']) 
-.addAnswer(
-    [
-        'A continuacion selecione el numero de la marca que quieres consultar',
-        '👉 *1-* Apple ',
-        '👉 *2-* Xiaomi ',
-        '👉 *3-* Samsung ',
-        '👉 *4-* LG ',
-           
-            
-    ],
-    null,
-    null,
-    [flowApple]
-)
 
 
 
 
 // este es el principal donde vamos a resivir todo el flujo
 const flowPrincipal = addKeyword(['hola', 'ole', 'oe', 'hablalo', 'oelo', 'mijo', 'inicio'])
-    .addAnswer('🙌 Hey que mas ps bienvenido a ⚡*TEAM-KHCOMPANY*😎')
+    .addAnswer('🙌 Hey que mas ps bienvenido a ⚡*TEAM-KHCOMPANY* 😎')
     .addAnswer('Por favor, haznos saber cómo podemos ayudarte.')
     .addAnswer(
         [
             'A continuacion selecione el numero a consultar',
             '👉 *1-* Cotizar Reparación ',
-            '👉 *2-* Cotizar Clases Online ',
-            '👉 *3-* Quiero hablar Con Un *Asesor*',
+            '👉 *2*- Solicitar Reparación Remota ',
+            '👉 *3-* Quiero Hablar Con Un *Asesor*',
             '👉 *4-* Conocer Nuestra Dirección ',
-            '👉 *5-* Conocer Nuestro Horario De Atención',   
-            '👉 *6-* Cuentas Para Consignar',
-            '👉 *7*- Solicitar Reparación Remota ',
+            '👉 *5-* Conocer Nuestro Horario De Atención',
+            '👉 *6-* Cotizar Clases Online ',
+            '👉 *7-* Cuentas Para Consignar',
+            
            
         ],
         null,
         null,
-        [flowcuenta, flowmarcas, flowasesor, flowremoto, flowdirecc, flowhora]
+        [flowcuenta, flowmarcas, flowasesor, flowremoto, flowdirecc, flowhora, flowclases]
     )
 
 
