@@ -7,13 +7,14 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
 
-
+const flowotroda1 = addKeyword(['1']).addAnswer(['Describenos a detalle el Bloqueo o envianos una foto'])
 
 
 const flowremoto = addKeyword(['2']).addAnswer(
     [
         '⚡️Hey que más ps, para que empecemos con el servicio remoto descarga el siguiente programa ⚡️',
-        '\n ✅ https://www.ultraviewer.net/en/download.html' ])
+        '\n ✅ https://www.ultraviewer.net/en/download.html',
+        '\n🙃 Escribe *Inicio* para volver al Menu'])
 
 
 const flowasesor = addKeyword(['3']).addAnswer(['📄 Nuestros asesores te responderan de 9:00 AM a 7:00 PM. ',
@@ -21,20 +22,76 @@ const flowasesor = addKeyword(['3']).addAnswer(['📄 Nuestros asesores te respo
 
    
 
+   const flowcuentaxia = addKeyword(['1']).addAnswer(
+    [
+        '⚡️Los Precios de las cuentas de google varian en la versión que tenga⚡️',
+        '\n Para ver la Versión el celular debe de estar formateado y en el inicio "*primera pantalla cuando prende*" ',
+        '\n MIUI 12 $10 ',
+        '\n MIUI 13 $20 ',
+        '\n MIUI 14 $25 ',
+        '\n MIUI HyperOS $30 ',
+        '\n Aca encontras un ejemplo de las versiónes ',
+        '✅  https://team-khcompany.com/xiaomi.jpg',
+        '\n🙃 Escribe *Inicio* para volver al Menu'])
 
 
+        const flowcuentaxiami = addKeyword(['2']).addAnswer(
+            [
+                '⚡️Precios de las cuentas de Xiaomi varian en la versión que tenga⚡️',
+                '\n Estos Son los Precios del *Bypass* ',
+                '\n MIUI 12 $35 ',
+                '\n MIUI 13 $35 ',
+                '\n MIUI 14 $60 ',
+                '\n MIUI HyperOS $60 ',
+                '\n Estos Son los Precios del *raiz* ',
+                '\n *TODAS LAS CUENTAS DE RAIZ CUESTAN $130*  NO IMPORTA LA VERSIÓN NI EL CELULAR ',
+                '\n Aca encontras un ejemplo del bloqueo de la cuenta Xiaomi ',
+                '✅  https://team-khcompany.com/cuentami.jpg',
+                '\n🙃 Escribe *Inicio* para volver al Menu'])
+
+                const flownopagomi = addKeyword(['3']).addAnswer(
+                    [
+                    '⚡️ Precios De No Pago Xiaomi ⚡️',
+                '\n Candado de Claro $50 ',
+                '\n Payjoy $60 ',
+                '\n Credi Minuto $60 ',
+                '\n Credi Smart $60 ',
+                '\n Credi Wom $60 ',
+                '\n Bloqueo Administrativo $60 ',   
+                '\n 👉 *1*- Otro Bloqueo ', 
+            
+                    ],
+                    null,
+                    null,
+                    [flowotroda1]
+                )
+
+                const flowflasheomi = addKeyword(['4']).addAnswer(
+                    [
+                        '⚡️Precios Flasheo de Xiaomi varian en la gama del dispositivo⚡️',
+                        '\n GAMA BAJA  $10 ',
+                        '\n GAMA MEDIA $20 ',
+                        '\n GAMA ALTA $30 ',
+                        '\n *NOTA:* ',
+                        '⚠️ En la gama media y alta de o no de el flasheo hay que pagarlo ya que consume creditos al hacer el servició ⚠️',
+                        '\n ⚠️ *EL FLASHEO NO BORRA CUENTA DE GOOGLE NI CUENTAS XIAOMI* ⚠️',
+                        '\n ⚠️ *SI EL CELULAR FUE LIBERADO EN EL FLASHEO SE PIERDE LA LIBERADA* ⚠️  ', 
+                        '\n🙃 Escribe *Inicio* para volver al Menu'])    
+               
 
 
    const flowdirecc = addKeyword(['4']).addAnswer(
     [
         '⚡️Hey que más ps, Nos encontraras en el *Centro Comercial Verecruz* en el Local *109* Burbuja *5* de 9:00 AM a 7:00 PM. De Lunes A Sabado⚡️',
-        '\n ✅ https://maps.app.goo.gl/zTEMxnzoijsFid879' ])
+        '\n ✅ https://maps.app.goo.gl/zTEMxnzoijsFid879',
+        '\n🙃 Escribe *Inicio* para volver al Menu'])
 
 
         const flowhora = addKeyword(['5']).addAnswer(
             [
                 '⚡️Hey que más ps, Nuestro Horario de Atención es de 9:00 AM a 7:00 PM. De Lunes A Sabado⚡️',
-                '\n ✅ Te Esperamos Pronto ⚡️' ])
+                '\n ✅ Te Esperamos Pronto ⚡️',
+                '\n🙃 Escribe *Inicio* para volver al Menu'])
         
     
 
@@ -43,7 +100,7 @@ const flowBypass6ax = addKeyword(['1']).addAnswer(
          'están pidiendo pin o están en desactivado si ya es flasheado ',
         ' en “hola” los precios son diferentes.',
 'Precios bypass ',
-'iPhone 6 $35',
+'\n iPhone 6 $35',
 'iPhone 6 Plus $35 ',
 'iPhone 6s #50',
 'iPhone 6s Plus $50',
@@ -61,7 +118,7 @@ const flowBypassxsa16 = addKeyword(['2']).addAnswer([' ⚠️⚠️*EN EL MOMENT
  '1- HAY QUE DEJARLO PAGO 100% Y DEMORA 24 HORAS SE PUEDE REMOTO O FÍSICO ',
  '3- ❌ NO PUEDE ESTAR CON BANDAS CERRADAS NI REPORTADO EN COLOMBIA NI EN INTERNACIONAL ',
  '4- SI NO CONOCE SI ESTA CON BANDAS CERRADAS O REPORTADO MANDENOS EL IMEI PARA REVISAR ✅',
- 'IPHONE SE 2ND GEN ⚡️ $380.000 ',
+ '\n IPHONE SE 2ND GEN ⚡️ $380.000 ',
  'IPHONE SE 3ND GEN ⚡️ $440.000',
  'IPHONE XR, XS, XSMAX ⚡️ $390.000',
  'IPHONE 11 ⚡️ $440.000',
@@ -131,14 +188,29 @@ const flowturbo = addKeyword(['6']).addAnswer(['⚡️*INFORMACION DE TURBO SIM 
     '\n🙃 Escribe *Inicio* para volver al Menu'])
 
 
-const flowotroda = addKeyword(['7']).addAnswer(['Describenos a detalle el daño a consultar'])
+
+    const flowflasheoapple = addKeyword(['7']).addAnswer(
+        [
+            '⚡️ Precio Flasheo de Iphone, Ipad, Ipod. ⚡️',
+            '\n *TODOS LOS FLASHEOS DE DISPOSITIVOS APPLE CUESTAN*  $10 ',
+            '\n *NOTA:* ',
+            ' ⚠️ *EL FLASHEO NO BORRA LA CUENTA DE ICLOUD* ⚠️',
+            '\n ⚠️ *SI LE HICIERON BANDAS TEMPORALES SE REBLOQUEARA AL ESTADO ORIGINAL* ⚠️',
+            '\n ⚠️ *SI EL CELULAR TENIA BYPASS QUEDA BLOQUEADO* ⚠️  ', 
+            '\n🙃 Escribe *Inicio* para volver al Menu'])
+
+
+const flowotroda = addKeyword(['8']).addAnswer(['Describenos a detalle el daño a consultar'])
+
+
 
 
 const flowclases = addKeyword(['6']).addAnswer(
     [
         '⚡️ La mejor forma de predecir el futuro es crearlo ⚡️',
         '\n ⚡️ Capacítate como técnico en software de dispositivos móviles ⚡️',
-        '\n ✅ https://team-khcompany.com/#pricing' ])        
+        '\n ✅ https://team-khcompany.com/#pricing',
+         '\n🙃 Escribe *Inicio* para volver al Menu'])       
 
 
 
@@ -150,9 +222,23 @@ const flowcuenta = addKeyword(['7']).addAnswer(['👉 #42049019682 ahorros banco
 '👍 Favor mandar comprobante ',
 
 '⚡ Gracias por confiar en KHCOMPANY',
-'\n🙃 Escribe *Inicio* para volver ',
+'\n🙃 Escribe *Inicio* para volver al menu',
     ])
 
+
+    const flowxiaomi = addKeyword(['2']).addAnswer(
+        [
+            'A continuacion selecione el numero del servicio que quieres consultar',
+            '\n👉 *1-* Cuenta Google ',
+            '👉 *2-* Cuenta Xiaomi ',
+            '👉 *3-* Bloqueo Por No Pago ',
+            '👉 *4-* Flasheo ',
+                    
+        ],
+        null,
+        null,
+        [flowcuentaxia, flowcuentaxiami, flownopagomi, flowflasheomi]
+    )
 
 
 
@@ -160,17 +246,18 @@ const flowcuenta = addKeyword(['7']).addAnswer(['👉 #42049019682 ahorros banco
 const flowApple = addKeyword(['1']).addAnswer(
     [
         'A continuacion selecione el numero del servicio que quieres consultar',
-        '👉 *1-* Bypass del 6 al X ',
+        '\n 👉 *1-* Bypass del 6 al X ',
         '👉 *2-* Bypass del Xs al 15 ',
         '👉 *3-* Icloud Raiz ',
         '👉 *4-* Bandas',
         '👉 *5-* Bloqueo Por no Registro ',
-        '👉 *6-* Turbo sim',   
-        '👉 *7*- Otro Daño ',         
+        '👉 *6-* Turbo sim', 
+        '👉 *7-* Flasheo',   
+        '👉 *8*- Otro Daño ',         
     ],
     null,
     null,
-    [flowBypass6ax, flowIcloudraiz, flowbandas, flownoregistroip, flowturbo, flowotroda, flowBypassxsa16]
+    [flowBypass6ax, flowIcloudraiz, flowbandas, flownoregistroip, flowturbo, flowotroda, flowflasheoapple, flowBypassxsa16]
 )
 
 
@@ -181,14 +268,15 @@ const flowmarcas = addKeyword(['1'])
 .addAnswer(
     [
         'A continuacion selecione el numero de la marca que quieres consultar',
-        '👉 *1-* Apple ',
+        '\n👉 *1-* Apple ',
+        '👉 *2-* Xiaomi ',
        
            
             
     ],
     null,
     null,
-    [flowApple]
+    [flowApple, flowxiaomi]
 )
 
 
@@ -200,7 +288,7 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'oe', 'hablalo', 'oelo', 'mijo'
     .addAnswer(
         [
             'A continuacion selecione el numero a consultar',
-            '👉 *1-* Cotizar Reparación ',
+            '\n👉 *1-* Cotizar Reparación ',
             '👉 *2*- Solicitar Reparación Remota ',
             '👉 *3-* Quiero Hablar Con Un *Asesor*',
             '👉 *4-* Conocer Nuestra Dirección ',
